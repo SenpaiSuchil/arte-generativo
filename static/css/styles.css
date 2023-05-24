@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/ruta/a/ubuntu-regular.woff2') format('woff2'),
+         url('/ruta/a/ubuntu-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #051724;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(218, 218, 218);
+}
+
+#ip {
+    color: #195681;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upload-form {
+    border: 5px solid #00536e;
+    border-radius: 5px;
+    height: 150px;
+    width: 300px;
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.file-input {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+  
+.submit-btn {
+    background-color: #007e9d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+  #image-preview {
+    border: 5px solid #00536e;
+    border-radius: 5px;
+    background-color: #00536e;
+    color: white;
+    font-weight: bold;
+    height: 150px;
+    width: 300px;
+    padding: 50px;
+  }
+
+  #image-preview img {
+    max-width: 50%;
+    max-height: 400px;
+  }
+
+  #image-preview p {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-bottom: 150px;
+}
+
+footer p {
+    font-weight: bold;
+}

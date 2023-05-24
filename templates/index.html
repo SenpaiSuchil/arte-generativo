@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página Web Flask</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Generative Art App</h1>
+
+    <div class="container">
+        <!-- Formulario para subir la imagen y guardar en la carpeta "uploads", la función está en la "webApp de Flask" -->
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="image">Cargar imagen</label>
+            <input type="file" id="image" name="image" accept="image/*" class="file-input">
+            <input type="submit" value="Cargar" class="submit-btn">
+        </form>
+
+        <div id="image-preview">
+            <p>Imagen cargada</p>
+            <!-- Aquí se muestra la imagen... -->
+            <!-- {% if filename %}
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Imagen subida">
+            {% endif %} -->
+        </div>
+    </div>
+
+    <p id = "ip">Dirección IP para acceder: {{ ip_address }}:5000 o http://127.0.0.1:5000/</p>
+    
+    <footer>
+        <p>Creado por:</p>
+        <li>
+            <ul>
+                Juan Manuel Barajas Gomez
+            </ul>
+            <ul>
+                Liz (completar)
+            </ul>
+            <ul>
+                Jonathan (completar)
+            </ul>
+        </li>
+    </footer>
+    
+
+</body>
+</html>
