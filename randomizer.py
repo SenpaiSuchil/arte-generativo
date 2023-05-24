@@ -30,4 +30,4 @@ def glitch(img):
 
     glitcher=ImageGlitcher()
     glitchImage=glitcher.glitch_image(img, random.uniform(0.1,10.0), color_offset=colorOffsetVal)
-    glitchImage.save("test_images/glitch2.jpg")
+    glitchImage.save("test_images/glitch.jpg")
