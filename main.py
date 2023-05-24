@@ -1,5 +1,5 @@
 from imageToAscii import *
-from glitch import *
+from randomizer import *
 from imageCreator import *
 
 #este archivo planea ser alguna especie de menú para modificar de diferentes maneras una imagen
@@ -8,11 +8,12 @@ from imageCreator import *
 
 
 if __name__ == "__main__":
-    imagePath=input("ingrese la ruta de la imagen:\n")
+    #imagePath=input("ingrese la ruta de la imagen:\n")
+    imagePath="test_images/mymelody.jpeg"
     # image=imageToAscii(imagePath)
     # glitch=glitchImage(imagePath)
     # file=open("ascii.txt", "w")
     # file.write(image)
     # file.close()
     # print(image)
-    imageCreator(imagePath)
+    glitchImage(imagePath)
