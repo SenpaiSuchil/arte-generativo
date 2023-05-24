@@ -9,11 +9,11 @@ from imageCreator import *
 
 if __name__ == "__main__":
     #imagePath=input("ingrese la ruta de la imagen:\n")
-    imagePath="test_images/mymelody.jpeg"
+    imagePath="test_images/clown.jpeg"
     # image=imageToAscii(imagePath)
     # glitch=glitchImage(imagePath)
     # file=open("ascii.txt", "w")
     # file.write(image)
     # file.close()
     # print(image)
-    glitchImage(imagePath)
+    applyFilter(imagePath)
