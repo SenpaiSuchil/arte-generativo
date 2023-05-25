@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página Web Flask</title>
+    <title>Generative Art App</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -18,14 +18,14 @@
         <div id="image-preview">
             <p>Imagen cargada</p>
             <!-- Aquí se muestra la imagen... -->
-            <!-- {% if filename %}
-            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Imagen subida">
-            {% endif %} -->
+            {% if filename %}
+            <img src="{{ url_for('upload', filename=filename) }}" alt="Imagen subida">
+            {% endif %}
         </div>
     </div>
 
-    <p id = "ip">Dirección IP para acceder: {{ ip_address }}:5000 o http://127.0.0.1:5000/</p>
-    
+    <p id="ip">Dirección IP para acceder: {{ ip_address }}:5000 o http://127.0.0.1:5000/</p>
+
     <footer>
         <p>Creado por:</p>
         <li>
@@ -36,11 +36,9 @@
                 Lisseth Abigail Martínez Castillo
             </ul>
             <ul>
-                Jonathan (completar)
+                Jonathan Medina Herrera
             </ul>
         </li>
     </footer>
-    
-
 </body>
 </html>
