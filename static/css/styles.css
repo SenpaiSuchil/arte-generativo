@@ -14,9 +14,8 @@ body {
     color: rgb(218, 218, 218);
 }
 
-#ip {
-    color: #195681;
-    font-weight: bold;
+h1 {
+    margin: 5% 0% 5%;
 }
 
 label {
@@ -27,16 +26,16 @@ label {
 .upload-form {
     border: 5px solid #00536e;
     border-radius: 5px;
-    height: 150px;
+    height: 200px;
     width: 300px;
     padding: 50px;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .file-input {
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: auto;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -47,14 +46,36 @@ label {
     border: none;
     padding: 10px 20px;
     text-align: center;
-    display: inline-block;
+    font-weight: bold;
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
     border-radius: 5px;
     cursor: pointer;
 }
 
-
+.custom-file-label {
+    display: inline-block;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #loadImg:hover {
+    background-color: rgb(207, 207, 207);
+  }
+  
+  #loadImg {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 20%;
+    padding: 20px;
+  }
 
   #image-preview {
     border: 5px solid #00536e;
@@ -62,12 +83,12 @@ label {
     background-color: #00536e;
     color: white;
     font-weight: bold;
-    height: 250px;
+    height: 300px;
     width: 400px;
   }
 
   #image-preview img {
-    height: 250px;
+    height: 300px;
     width: 400px;
   }
 
@@ -88,3 +109,4 @@ label {
 footer p {
     font-weight: bold;
 }
+

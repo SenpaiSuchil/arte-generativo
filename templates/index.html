@@ -3,6 +3,7 @@
 <head>
     <title>Generative Art App</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <h1>Generative Art App</h1>
@@ -10,9 +11,13 @@
     <div class="container">
         <!-- Formulario para subir la imagen y guardar en la carpeta "uploads", la función está en la "webApp de Flask" -->
         <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
-            <label for="image">Cargar imagen</label>
-            <input type="file" id="image" name="image" accept="image/*" class="file-input">
-            <input type="submit" value="Cargar" class="submit-btn">
+            <div class="button-container">
+                <label for="image" class="custom-file-label">
+                    <img id = "loadImg" src="static/loadImg.png" alt="loadImg">
+                </label>
+                <input type="file" id="image" name="image" accept="image/*" class="file-input" onchange="showFileName()">
+            </div>
+            <input type="submit" value="Subir" class="submit-btn">
         </form>
     
         <div id="image-preview">
