@@ -24,7 +24,7 @@
             <!-- Aquí se muestra la imagen -->
             <!-- <img src="static/uploads/metallica.jpeg" alt="no image..."> -->
             {% if filename %}
-            <img src="{{ url_for('static', filename='uploads/' + filename) }}"alt="Error, no image...">
+            <img src="{{ url_for('static', filename='generated_images/' + filename) }}"alt="Error, no image...">
             {% endif %}
         </div>
         <!--debugger-->
