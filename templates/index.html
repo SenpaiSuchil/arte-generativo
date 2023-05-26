@@ -19,11 +19,12 @@
             <p>Imagen cargada</p>
             <!-- Aquí se muestra la imagen -->
             {% if filename %}
-            <img src="{{ url_for('static', filename='RandomFilterGen/uploads/' + filename) }}">
+            <img src="{{ url_for('static', filename='/uploads/' + filename) }}">
             {% endif %}
         </div>
+        <!--debugger-->
+        <img src="{{ url_for('static', filename='/uploads/example.jpg') }}">
     </div>
-    
 
     <p id="ip">Dirección IP para acceder: {{ ip_address }}:5000 o http://127.0.0.1:5000/</p>
 
