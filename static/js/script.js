@@ -5,7 +5,7 @@ function showFileName() {
   
     if (fileInput.files.length > 0) {
       const fileName = fileInput.files[0].name;
-      fileNameLabel.innerHTML = `<img id="loadImg" src="static/loadImg.png" alt="loadImg"><br>${fileName}`;
+      fileNameLabel.innerHTML = `<img id="loadImg" src="static/loadImg.png" alt="loadImg"><br>Imagen: ${fileName}`;
       fileNameSpan.innerText = fileName;
       fileNameSpan.classList.remove("hide");
       fileNameSpan.classList.add("animated", "show");
