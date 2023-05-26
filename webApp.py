@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+
+from PIL import Image
 import socket
 import os
 import PIL.Image
@@ -18,9 +20,11 @@ def upload():
     if 'image' in request.files:
         # Obtenemos el archivo de imagen del formulario
         image = request.files['image']
+        image_rgba = Image.open(image)
+        image_rgb=image_rgba.convert("RGB")
         filename = image.filename
         # Guardamos el archivo en la carpeta 'uploads' con el nombre original
-        image.save('static/uploads/' + filename)
+        image_rgb.save('static/uploads/' + filename)
         # Aplicamos el efecto de glitch a la imagen
         glitched_image = apply_glitch('static/uploads/' + filename)
         # Generamos un nombre para la imagen glitcheada
