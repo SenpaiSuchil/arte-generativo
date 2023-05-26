@@ -10,10 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Obtenemos la dirección IP del servidor
-    ip_address = socket.gethostbyname(socket.gethostname())
     # Renderizamos la plantilla 'index.html' y pasamos la dirección IP como variable
-    return render_template('index.html', ip_address=ip_address)
+    return render_template('index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():

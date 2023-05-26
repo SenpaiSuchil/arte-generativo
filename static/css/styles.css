@@ -62,21 +62,14 @@ label {
     background-color: #00536e;
     color: white;
     font-weight: bold;
-    height: 150px;
-    width: 300px;
-    padding: 50px;
+    height: 250px;
+    width: 400px;
   }
 
   #image-preview img {
-    max-width: 137%;
-    max-height: 174px;
+    height: 250px;
+    width: 400px;
   }
-
-  #image-preview p {
-    text-align: center;
-    margin-top: 20%;
-  }
-  
 
 .container {
     display: flex;
@@ -84,8 +77,12 @@ label {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     margin-bottom: 150px;
+}
+
+.info {
+    text-align: left;
+    padding: 10%;
 }
 
 footer p {
