@@ -15,7 +15,11 @@ body {
 }
 
 h1 {
-    margin: 5% 0% 5%;
+    margin-top: 5%;
+}
+
+h3 {
+    margin-bottom: 5%;
 }
 
 label {
@@ -39,6 +43,10 @@ label {
     margin-left: auto;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.file-name {
+    display: none;
+  }
   
 .submit-btn {
     background-color: #007e9d;
@@ -58,7 +66,7 @@ label {
     color: white;
     border: none;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -80,7 +88,7 @@ label {
   #image-preview {
     border: 5px solid #00536e;
     border-radius: 5px;
-    background-color: #00536e;
+    background-color: #00526e50;
     color: white;
     font-weight: bold;
     height: 300px;
@@ -110,3 +118,35 @@ footer p {
     font-weight: bold;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .animated {
+    animation-duration: 5s;
+    animation-fill-mode: both;
+  }
+  
+  .show {
+    display: block;
+    animation-name: fadeIn;
+  }
+  
+  .hide {
+    display: none;
+    animation-name: fadeOut;
+  }

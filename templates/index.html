@@ -7,28 +7,27 @@
 </head>
 <body>
     <h1>Generative Art App</h1>
+    <h3>RandomFilterGen Project</h3>
 
     <div class="container">
         <!-- Formulario para subir la imagen y guardar en la carpeta "uploads", la función está en la "webApp de Flask" -->
         <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
             <div class="button-container">
-                <label for="image" class="custom-file-label">
-                    <img id = "loadImg" src="static/loadImg.png" alt="loadImg">
-                </label>
-                <input type="file" id="image" name="image" accept="image/*" class="file-input" onchange="showFileName()">
+              <label for="image" class="custom-file-label">
+                <img id="loadImg" src="static/loadImg.png" alt="loadImg">
+              </label>
+              <input type="file" id="image" name="image" accept="image/*" class="file-input" onchange="showFileName()">
             </div>
             <input type="submit" value="Subir" class="submit-btn">
-        </form>
-    
-        <div id="image-preview">
+          </form>
+          
+          <div id="image-preview">
             <!-- Aquí se muestra la imagen -->
-            <!-- <img src="static/uploads/metallica.jpeg" alt="no image..."> -->
             {% if filename %}
-            <img src="{{ url_for('static', filename='generated_images/' + filename) }}"alt="Error, no image...">
+              <img src="{{ url_for('static', filename='generated_images/' + filename) }}" alt="Error, no image..." id="preview-image" class="animated show">
             {% endif %}
-        </div>
-        <!--debugger-->
-        <!-- <img src="{{ url_for('static', filename='/uploads/example.jpg') }}"> -->
+          </div>
+          
     </div>
 
     <div class="info">
