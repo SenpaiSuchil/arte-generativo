@@ -14,15 +14,16 @@
             <input type="file" id="image" name="image" accept="image/*" class="file-input">
             <input type="submit" value="Cargar" class="submit-btn">
         </form>
-
+    
         <div id="image-preview">
             <p>Imagen cargada</p>
-            <!-- Aquí se muestra la imagen... -->
+            <!-- Aquí se muestra la imagen -->
             {% if filename %}
-            <img src="{{ url_for('upload', filename=filename) }}" alt="Imagen subida">
+            <img src="{{ url_for('static', filename='RandomFilterGen/uploads/' + filename) }}">
             {% endif %}
         </div>
     </div>
+    
 
     <p id="ip">Dirección IP para acceder: {{ ip_address }}:5000 o http://127.0.0.1:5000/</p>
 

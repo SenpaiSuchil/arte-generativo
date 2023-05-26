@@ -22,13 +22,13 @@ def upload():
         image = request.files['image']
         filename = image.filename
         # Guardamos el archivo en la carpeta 'uploads' con el nombre original
-        image.save('uploads/' + filename)
+        image.save('RandomFilterGen/uploads/' + filename)
         # Aplicamos el efecto de glitch a la imagen
-        glitched_image = apply_glitch('uploads/' + filename)
+        glitched_image = apply_glitch('RandomFilterGen/uploads/' + filename)
         # Generamos un nombre para la imagen glitcheada
         glitched_filename = 'glitched_' + filename
         # Guardamos la imagen glitcheada en la carpeta 'uploads' con el nuevo nombre
-        glitched_image.save('uploads/' + glitched_filename)
+        glitched_image.save('RandomFilterGen/uploads/' + glitched_filename)
         # Renderizamos la plantilla 'index.html' y pasamos el nombre de la imagen glitcheada como variable
         return render_template('index.html', filename=glitched_filename)
     # Si no se seleccionó ninguna imagen, mostramos un mensaje de error
@@ -49,8 +49,13 @@ def apply_glitch(path):
 
     # Generamos un nombre único para la imagen glitcheada
     glitched_filename = generate_filename()
-    # Guardamos la imagen glitcheada en la carpeta 'uploads' con el nuevo nombre
-    glitched_save_path = os.path.join('uploads', glitched_filename)
+    # Ruta de la carpeta 'uploads' en la ruta 'RandomFilterGen/uploads/'
+    uploads_folder = os.path.join('RandomFilterGen', 'uploads')
+    # Comprobamos si la carpeta 'uploads' existe, si no, la creamos
+    if not os.path.exists(uploads_folder):
+        os.makedirs(uploads_folder)
+    # Guardamos la imagen glitcheada en la carpeta 'uploads' con el nuevo nombre y en la ruta correcta
+    glitched_save_path = os.path.join(uploads_folder, glitched_filename)
     img.save(glitched_save_path)
 
     # Retornamos la imagen glitcheada en lugar del nombre de archivo
