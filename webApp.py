@@ -22,7 +22,7 @@ def upload():
         image = request.files['image']
         filename = image.filename
         # Guardamos el archivo en la carpeta 'uploads' con el nombre original
-        image.save('RandomFilterGen/uploads/' + filename)
+        image.save('static/uploads/' + filename)
         # Aplicamos el efecto de glitch a la imagen
         glitched_image = apply_glitch('RandomFilterGen/uploads/' + filename)
         # Generamos un nombre para la imagen glitcheada
