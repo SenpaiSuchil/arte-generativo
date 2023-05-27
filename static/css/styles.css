@@ -119,11 +119,20 @@ label {
 .info {
     text-align: left;
     padding: 10%;
+    background-image: url("/static/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-footer p {
+footer {
     font-weight: bold;
+    background-color:#00536E;
+    padding: 10px;
+    list-style-type: none;
+    
 }
+
 
 @keyframes fadeIn {
     from {
