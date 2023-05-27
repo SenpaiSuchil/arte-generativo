@@ -117,20 +117,48 @@ label {
 }
 
 .info {
-    text-align: left;
-    padding: 10%;
-    background-image: url("/static/bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  text-align: left;
+  padding: 5%;
+  background-image: url("/static/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  transform: skewY(-355deg);
 }
+
+.info img {
+  height: 210px;
+  width: 310px;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  transform: skewY(355deg);
+}
+
+article img {
+  flex: 0 0 auto;
+  width: 200px; 
+  margin-right: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+article p {
+  flex: 1 1 auto;
+  text-shadow: 6px 6px 10px rgb(0, 0, 0); 
+}
+
 
 footer {
     font-weight: bold;
     background-color:#00536E;
+    margin-top: 10%;
     padding: 10px;
     list-style-type: none;
-    
+    text-shadow: 6px 6px 10px rgb(0, 0, 0); 
 }
 
 
