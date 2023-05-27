@@ -7,14 +7,8 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-    <h1 class="glitch" data-text="Generative Art App">Generative Art App</h1>
-    <h3>RandomFilterGen Project</h3>
+    <img id = "logo" src="static/logo.png" alt="logo.png">
 
-
-
-
-
-    
     <div class="container">
         <!-- Formulario para subir la imagen y guardar en la carpeta "uploads", la función está en la "webApp de Flask" -->
         <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form" onsubmit="showSpinner()">
@@ -42,15 +36,6 @@
         </div>
     </div>
     
-    
-    
-
-
-
-
-
-
-
 
     <div class="info">
         <p>El arte generativo es una forma de expresión artística en la que se 
