@@ -86,10 +86,36 @@
             </ul>
         </li>
     </footer>
-
-    <button id="scrollToTopBtn" onclick="scrollToTop()" class="hide">
+      
+    <button id="btn-regresar">
         <img src="/static/continue.png" alt=">>" style = "width: 50px; height: 50px;">
     </button>
+
+    <!-- Por alguna razon al poner el codigo en el archivo js no funciona el boton, dejemoslo aqui
+    ya funciona, no le mueva...
+    -->
+    <script>
+        // Función para regresar al inicio
+        function regresarInicio() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Para un desplazamiento suave, opcional
+            });
+            }
+
+            // Evento click del botón
+            var btnRegresar = document.getElementById('btn-regresar');
+            btnRegresar.addEventListener('click', regresarInicio);
+
+            // Mostrar u ocultar el botón según la posición de desplazamiento
+            window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                btnRegresar.classList.add('mostrar');
+            } else {
+                btnRegresar.classList.remove('mostrar');
+            }
+        });
+    </script>
 
 </body>
 </html> 

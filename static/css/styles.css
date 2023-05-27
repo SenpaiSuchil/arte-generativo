@@ -259,7 +259,7 @@ footer {
 
 
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   display: none;
   position: fixed;
   bottom: 25px;
@@ -276,5 +276,28 @@ footer {
 
 #scrollToTopBtn:hover {
   opacity: 1;
+} */
+
+#btn-regresar {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 9999;
+  transition: opacity 0.3s;
+  transform: rotate(270deg);
+  visibility: hidden;
 }
+
+#btn-regresar.mostrar {
+  visibility: visible;
+}
+
+#btn-regresar:hover {
+  opacity: 1;
+}
+
 
