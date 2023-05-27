@@ -28,7 +28,7 @@ label {
 }
 
 .upload-form {
-    border: 5px solid #00536e;
+    border: 5px dotted #00536e;
     border-radius: 5px;
     height: 200px;
     width: 300px;
@@ -49,16 +49,20 @@ label {
   }
   
 .submit-btn {
-    background-color: #007e9d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 5px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+
+    margin-left: 375px;
+
+}
+
+#continue {
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: -100px;
 }
 
 .custom-file-label {
@@ -85,6 +89,11 @@ label {
     padding: 20px;
   }
 
+  #loadedImg {
+    height: 300px;
+    width: 400px;
+  } 
+
   #image-preview {
     border: 5px solid #00536e;
     border-radius: 5px;
@@ -93,6 +102,8 @@ label {
     font-weight: bold;
     height: 300px;
     width: 400px;
+
+    margin-left: 70px;
   }
 
   #image-preview img {
@@ -150,3 +161,134 @@ footer p {
     display: none;
     animation-name: fadeOut;
   }
+
+
+  .hidden {
+    display: none;
+}
+
+  .spinner {
+    border: 16px solid #f3f3f3; /* Color de fondo del spinner */
+    border-top: 16px solid #3498db; /* Color del spinner */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border:4px solid #0000;
+  border-radius: 50%;
+  border-color:#FFFFFF #0000;
+  animation: s6 1s infinite linear;
+
+  margin-top: 130px;
+  margin-right: 170px;
+  margin-bottom: 263px;
+  margin-left: 170px;
+}
+.spinner::before,
+.spinner::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:2px;
+  border:inherit;
+  border-radius: 50%;
+}
+.spinner::before {
+  border-color:#00536E #0000;
+  animation:inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.spinner::after {
+  margin:8px;
+}
+
+@keyframes s6 { 
+  100%{transform: rotate(1turn)}
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*H1 con efecto Glitch*/
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-animation 2s infinite linear alternate-reverse;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-animation-reverse 3s infinite linear alternate;
+  z-index: -2;
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-5px, 5px);
+    opacity: 0.75;
+    color: red;
+  }
+  /* ... Resto de los porcentajes de la animación ... */
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+    color: blue;
+  }
+}
+
+@keyframes glitch-animation-reverse {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-3px, -3px);
+    opacity: 0.75;
+    color: red;
+  }
+  /* ... Resto de los porcentajes de la animación ... */
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+    color: blue;
+  }
+}
+
