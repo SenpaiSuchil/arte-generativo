@@ -18,10 +18,6 @@ function showFileName() {
   }
   
 
-
-  
-
-
   function showSpinner() {
     const spinner = document.getElementById('spinner');
     spinner.classList.remove('hidden');
@@ -61,3 +57,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+window.addEventListener("scroll", function () {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (window.pageYOffset > 0) {
+    scrollToTopBtn.style.display = "block";
+    console.log("funcion inicio correctamente...")
+  } else {
+    scrollToTopBtn.style.display = "none";
+    console.log("funcion inicio incorrectamente...")
+  }
+});
+
+document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  console.log("funcion inicio correctamente...")
+});
